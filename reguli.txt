@@ -1,0 +1,1076 @@
+[scop == diagnostic].
+
+Id_Regula@1
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- bazin
+[#] sex <- feminin
+[#] durere_urinara
+diagnostic=cistita//FC= 70 .
+
+Id_Regula@2
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- bazin
+[#] sex <- feminin
+[#] durere_urinara
+diagnostic=cistita//FC= 80 .
+
+Id_Regula@3
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- bazin
+[#] sex <- feminin
+[#] durere_urinara
+[#] poliurie
+[#] incontinenta_urinara
+diagnostic=cistita//FC= 90 .
+
+Id_Regula@4
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- bazin
+[#] sex <- feminin
+[#] durere_urinara
+[#] poliurie
+[#] incontinenta_urinara
+diagnostic=cistita//FC= 95 .
+
+Id_Regula@5
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- bazin
+[#] sex <- masculin
+[#] durere_urinara
+diagnostic=prostatita//FC= 70 .
+
+Id_Regula@6
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- bazin
+[#] sex <- masculin
+[#] durere_urinara
+diagnostic=prostatita//FC= 90 .
+
+Id_Regula@7
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- bazin
+[#] sex <- masculin
+[#] durere_urinara
+[#] incontinenta_urinara
+diagnostic=prostatita//FC= 95 .
+
+Id_Regula@8
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- bazin
+[#] sex <- masculin
+[#] durere_urinara
+[#] incontinenta_urinara
+diagnostic=prostatita//FC= 94 .
+
+Id_Regula@9
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- general
+[#] tuse <- deloc
+[#] stranut
+[#] lacrimare
+diagnostic=alergie//FC= 60 .
+
+Id_Regula@10
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] tuse <- deloc
+[#] stranut
+[#] lacrimare
+diagnostic=alergie//FC= 90 .
+
+Id_Regula@11
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] tuse <- deloc
+[#] stranut
+[#] lacrimare
+diagnostic=alergie//FC= 80 .
+
+Id_Regula@12
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] tuse <- productiva
+[#] stranut
+diagnostic=tuse//FC= 95 .
+
+Id_Regula@13
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] tuse <- seaca
+[#] stranut
+diagnostic=tuse//FC= 90 .
+
+Id_Regula@14
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- general
+[#] tuse <- productiva
+[#] stranut
+diagnostic=tuse//FC= 85 .
+
+Id_Regula@15
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- general
+[#] tuse <- seaca
+[#] stranut
+diagnostic=tuse//FC= 80 .
+
+Id_Regula@16
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- general
+[#] tuse <- productiva
+[#] stranut
+diagnostic=tuse//FC= 94 .
+
+Id_Regula@17
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- general
+[#] tuse <- seaca
+[#] stranut
+diagnostic=tuse//FC= 89 .
+
+Id_Regula@18
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- general
+[#] tuse <- seaca
+[#] not[stranut]
+[#] secretie_nazala
+[#] umflarea_amigdalelor
+diagnostic=rujeola//FC= 95 .
+
+Id_Regula@19
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- general
+[#] tuse <- productiva
+[#] not[stranut]
+[#] secretie_nazala
+[#] umflarea_amigdalelor
+diagnostic=rujeola//FC= 90 .
+
+Id_Regula@20
+Premise:
+[#] varsta <- copil
+[#] tuse <- productiva
+[#] not[stranut]
+[#] secretie_nazala
+[#] umflarea_amigdalelor
+diagnostic=rujeola//FC= 89 .
+
+Id_Regula@21
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] tuse <- seaca
+[#] not[stranut]
+[#] secretie_nazala
+[#] umflarea_amigdalelor
+diagnostic=rujeola//FC= 60 .
+
+Id_Regula@22
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] tuse <- productiva
+[#] not[stranut]
+[#] secretie_nazala
+[#] umflarea_amigdalelor
+diagnostic=rujeola//FC= 55 .
+
+Id_Regula@23
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- abdomen
+[#] febra <- mare
+[#] varsaturi
+[#] diaree
+[#] not[arsuri_gastrice]
+[#] not[frisoane]
+diagnostic=apendicita//FC= 85 .
+
+Id_Regula@24
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- abdomen
+[#] febra <- mare
+[#] varsaturi
+[#] diaree
+[#] not[arsuri_gastrice]
+[#] not[frisoane]
+diagnostic=apendicita//FC= 90 .
+
+Id_Regula@25
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- abdomen
+[#] febra <- mare
+[#] varsaturi
+[#] diaree
+[#] not[arsuri_gastrice]
+[#] not[frisoane]
+diagnostic=apendicita//FC= 50 .
+
+Id_Regula@26
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- abdomen
+[#] febra <- deloc
+[#] varsaturi
+[#] constipatie
+[#] not[arsuri_gastrice]
+diagnostic=ocluzie_intestinala//FC= 95 .
+
+Id_Regula@27
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- abdomen
+[#] febra <- deloc
+[#] varsaturi
+[#] constipatie
+[#] not[arsuri_gastrice]
+diagnostic=ocluzie_intestinala//FC= 85 .
+
+Id_Regula@28
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- abdomen
+[#] febra <- deloc
+[#] varsaturi
+[#] constipatie
+[#] not[arsuri_gastrice]
+diagnostic=ocluzie_intestinala//FC= 45 .
+
+Id_Regula@29
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- general
+[#] febra <- mare
+[#] eczema_piele_prurit
+[#] frisoane
+diagnostic=varicela//FC= 95 .
+
+Id_Regula@30
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- general
+[#] eczema_piele_prurit
+[#] frisoane
+diagnostic=varicela//FC= 90 .
+
+Id_Regula@31
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] febra <- mare
+[#] eczema_piele_prurit
+[#] frisoane
+diagnostic=varicela//FC= 65 .
+
+Id_Regula@32
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- general
+[#] febra <- mare
+[#] eczema_piele_prurit
+[#] edem
+diagnostic=rubeola//FC= 95 .
+
+Id_Regula@33
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- general
+[#] eczema_piele_prurit
+[#] edem
+diagnostic=rubeola//FC= 90 .
+
+Id_Regula@34
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] febra <- mare
+[#] eczema_piele_prurit
+[#] edem
+diagnostic=rubeola//FC= 65 .
+
+Id_Regula@35
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- cap
+[#] cefalee
+[#] expunere_solara
+diagnostic=insolatie//FC= 95 .
+
+Id_Regula@36
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- cap
+[#] cefalee
+[#] expunere_solara
+diagnostic=insolatie//FC= 90 .
+
+Id_Regula@37
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- cap
+[#] cefalee
+[#] expunere_solara
+diagnostic=insolatie//FC= 85 .
+
+Id_Regula@38  
+Premise:
+[#] varsta <- adult
+[#] varsaturi
+[#] febra <- mare
+[#] nr_pipi <- 1
+[#] zona_dureroasa <- abdomen
+diagnostic=litiaza_renala//FC= 60 .
+
+Id_Regula@39  
+Premise:
+[#] varsta <- batran
+[#] lipsa_apetit 
+[#] diaree  
+[#] zona_dureroasa <- abdomen
+diagnostic=litiaza_renala//FC= 75 .
+
+Id_Regula@40  
+Premise:
+[#] varsta <- copil
+[#] lipsa_apetit 
+[#] febra <- mare 
+[#] varsaturi
+[#] not[constipatie]
+[#] zona_dureroasa <- abdomen
+diagnostic=litiaza_renala//FC= 45 .
+
+Id_Regula@41  
+Premise:
+[#] varsta <- adult
+[#] febra <- mare 
+[#] varsaturi
+[#] frisoane 
+[#] zona_dureroasa <- abdomen
+diagnostic=litiaza_biliara//FC= 65 .
+
+Id_Regula@42 
+Premise:
+[#] varsta <- batran
+[#] febra <- mare 
+[#] varsaturi
+[#] frisoane 
+[#] zona_dureroasa <- abdomen
+diagnostic=litiaza_biliara//FC= 85 .
+
+Id_Regula@43  
+Premise:
+[#] varsta <- copil
+[#] febra <- mare 
+[#] diaree 
+[#] frisoane 
+[#] zona_dureroasa <- abdomen
+diagnostic=litiaza_biliara//FC= 45 .
+
+Id_Regula@44 
+Premise:
+[#] varsta <- adult
+[#] vedere_incetosata  
+[#] diaree 
+[#] oboseala 
+[#] zona_dureroasa <- abdomen
+diagnostic=intoxicatie_alim//FC= 70 .
+
+Id_Regula@45 
+Premise:
+[#] varsta <- copil
+[#] vedere_incetosata  
+[#] diaree 
+[#] oboseala 
+[#] zona_dureroasa <- abdomen
+diagnostic=intoxicatie_alim//FC= 65 .
+
+Id_Regula@46
+Premise:
+[#] varsta <- batran
+[#] vedere_incetosata  
+[#] diaree 
+[#] oboseala 
+[#] zona_dureroasa <- abdomen
+diagnostic=intoxicatie_alim//FC= 70 .
+
+Id_Regula@47
+Premise:
+[#] varsta <- adult
+[#] febra <- mica
+[#] frisoane 
+[#] cefalee 
+[#] fotofobie 
+[#] zona_dureroasa <- cap
+diagnostic=migrena//FC= 65 .
+
+Id_Regula@48
+Premise:
+[#] varsta <- batran
+[#] febra <- mica
+[#] frisoane 
+[#] cefalee 
+[#] fotofobie 
+[#] zona_dureroasa <- cap
+diagnostic=migrena//FC= 60 .
+
+Id_Regula@49
+Premise:
+[#] varsta <- copil
+[#] febra <- mica
+[#] frisoane 
+[#] cefalee 
+[#] fotofobie 
+[#] zona_dureroasa <- cap
+diagnostic=migrena//FC= 55 .
+
+Id_Regula@50
+Premise:
+[#] varsta <- adult
+[#] tuse 
+[#] febra <- mare
+[#] not[secretie_nazala]
+[#] varsaturi <- nu
+[#] zona_dureroasa <- torace
+diagnostic=bronsita//FC= 65 .
+
+Id_Regula@51
+Premise:[#] varsta <- adult
+[#] tuse 
+[#] febra <- mare
+[#] wheezing 
+[#] varsaturi <- nu
+[#] sputa 
+[#] zona_dureroasa <- torace
+diagnostic=bronsita//FC= 75 .
+
+Id_Regula@52
+Premise:
+[#] varsta <- batran
+[#] tuse 
+[#] febra <- mare
+[#] not[secretie_nazala]
+[#] varsaturi <- nu
+[#] zona_dureroasa <- torace
+diagnostic=bronsita//FC= 70 .
+
+Id_Regula@53
+Premise:
+[#] varsta <- adult
+[#] cefalee 
+[#] nas_infundat 
+[#] zona_dureroasa <- cap
+diagnostic=sinuzita//FC= 80 .
+
+Id_Regula@54
+Premise:
+[#] varsta <- adult
+[#] tuse 
+[#] cefalee 
+[#] nas_infundat 
+[#] febra <- mare
+[#] zona_dureroasa <- cap
+diagnostic=sinuzita//FC= 75 .
+
+Id_Regula@55
+Premise:
+[#] varsta <- copil
+[#] tuse 
+[#] cefalee 
+[#] nas_infundat 
+[#] zona_dureroasa <- cap
+diagnostic=sinuzita//FC= 50 .
+
+Id_Regula@56
+Premise:
+[#] varsta <- adult
+[#] vedere_incetosata 
+[#] secretie_alb_galbuie 
+[#] not[cefalee]
+[#] zona_dureroasa <- cap
+diagnostic=conjunctivita//FC= 65 .
+
+Id_Regula@57
+Premise:
+[#] varsta <- batran
+[#] vedere_incetosata 
+[#] secretie_alb_galbuie 
+[#] not[cefalee]
+[#] zona_dureroasa <- cap
+diagnostic=conjunctivita//FC= 65 .
+
+Id_Regula@58
+Premise:
+[#] varsta <- copil
+[#] vedere_incetosata 
+[#] secretie_alb_galbuie 
+[#] not[cefalee]
+[#] zona_dureroasa <- cap
+diagnostic=conjunctivita//FC= 55 .
+
+Id_Regula@59
+Premise:
+[#] varsta <- adult
+[#] varsaturi
+[#] febra
+[#] cefalee 
+[#] not[insolatie]
+[#] zona_dureroasa <- cap
+diagnostic=meningita//FC= 55 .
+
+Id_Regula@60
+Premise:
+[#] varsta <- batran
+[#] varsaturi
+[#] febra
+[#] cefalee 
+[#] not[insolatie]
+[#] zona_dureroasa <- cap
+diagnostic=meningita//FC= 60 .
+
+Id_Regula@61
+Premise:
+[#] varsta <- copil
+[#] varsaturi
+[#] febra
+[#] cefalee 
+[#] not[insolatie]
+[#] zona_dureroasa <- cap
+diagnostic=meningita//FC= 45 .
+
+
+Id_Regula@62
+Premise:
+[#] varsta <- adult
+[#] varsaturi <- nu
+[#] senzatie_arsura_abdominala 
+[#] zona_dureroasa <- abdomen
+diagnostic=gastrita//FC= 60 .
+
+Id_Regula@63
+Premise:
+[#] varsta <- batran
+[#] varsaturi <- nu
+[#] senzatie_arsura_abdominala 
+[#] zona_dureroasa <- abdomen
+diagnostic=gastrita//FC= 60 .
+
+Id_Regula@64
+Premise:
+[#] varsta <- copil
+[#] varsaturi <- nu
+[#] senzatie_arsura_abdominala 
+[#] zona_dureroasa <- abdomen
+diagnostic=gastrita//FC= 55 .
+
+Id_Regula@65
+Premise:
+[#] varsta <- adult
+[#] varsaturi
+[#] senzatie_arsura_abdominala 
+[#] scaune_pe_zi <- 4
+[#] zona_dureroasa <- abdomen
+diagnostic=ulcer//FC= 65 .
+
+Id_Regula@66
+Premise:
+[#] varsta <- batran
+[#] varsaturi
+[#] senzatie_arsura_abdominala 
+[#] scaune_pe_zi <- 4
+[#] zona_dureroasa <- abdomen
+diagnostic=ulcer//FC= 70 .
+
+Id_Regula@67
+Premise:
+[#] varsta <- copil
+[#] varsaturi
+[#] senzatie_arsura_abdominala 
+[#] scaune_pe_zi <- 4
+[#] zona_dureroasa <- abdomen
+diagnostic=ulcer//FC= 45 .
+
+Id_Regula@68
+Premise:
+[#] varsta <- adult
+[#] varsaturi
+[#] not[secretii_nazale]
+[#] febra <- mare
+[#] frisoane 
+[#] zona_dureroasa <- torace
+diagnostic=pneumonie//FC= 65 .
+
+Id_Regula@69
+Premise:
+[#] varsta <- batran
+[#] varsaturi
+[#] not[secretii_nazale]
+[#] febra <- mare
+[#] frisoane 
+[#] zona_dureroasa <- torace
+diagnostic=pneumonie//FC= 70 .
+
+Id_Regula@70
+Premise:
+[#] varsta <- copil
+[#] varsaturi
+[#] not[secretii_nazale]
+[#] febra <- mare
+[#] frisoane 
+[#] zona_dureroasa <- torace
+diagnostic=pneumonie//FC= 50 .
+
+Id_Regula@71
+Premise:
+[#] pete_rosii
+[#] simptom_piele <- prurit
+diagnostic = simptom_piele_prurit//FC=95
+
+Id_Regula@72
+Premise:
+[#] mancarimi
+[#] senzatie_arsura
+diagnostic = simptom_piele_prurit//FC=95
+
+Id_Regula@73
+Premise:
+[#] poliurie
+[#] sange_in_urina
+[#] durere_la_urinare
+diagnostic = hematurie//FC=95
+
+Id_Regula@74
+Premise:
+[#] frig_excesiv
+[#] febra <- mare
+[#] transpiratie
+diagnostic = frisoane//FC=95
+
+Id_Regula@75
+Premise:
+[#] insomnie
+[#] durere_cap <- slaba
+diagnostic = oboseala//FC=95
+
+Id_Regula@76
+Premise:
+[#] lipsa_energie
+[#] plictiseala
+[#] cefalee
+diagnostic = oboseala//FC=95
+
+Id_Regula@77
+Premise:
+[#] durere_spate <- puternica
+diagnostic = oboseala//FC=95
+
+Id_Regula@78
+Premise:
+[#] durere_cap <- puternica
+[#] durere_spate <- slaba
+diagnostic = oboseala//FC=95
+
+Id_Regula@79
+Premise:
+[#] crampe_musculare
+diagnostic = dureri_musculare//FC=95
+
+Id_Regula@80
+Premise:
+[#] dificultate_inghitire
+[#] uscaciune_gat
+[#] raguseala
+diagnostic = durere_gat//FC=95
+
+Id_Regula@81
+Premise:
+[#] febra <- mare
+[#] durere_gat
+[#] durere_cap <- slaba
+diagnostic = umflarea_amigdalelor//FC=95
+
+Id_Regula@82
+Premise:
+[#] durere_cap <- puternica
+diagnostic = umflarea_amigdalelor//FC=95
+
+Id_Regula@83
+Premise:
+[#] durere_abdominala <- slaba
+[#] varsaturi
+[#] incontinenta_fecala
+diagnostic = constipatie//FC=95
+
+Id_Regula@84
+Premise:
+[#] durere_abdominala <- puternica
+[#] varsaturi
+[#] incontinenta_fecala
+diagnostic = constipatie//FC=95
+
+Id_Regula@85
+Premise:
+[#] amorteala
+[#] crampe_musculare
+[#] balonare_abdominala
+[#] transpiratie
+diagnostic = edem//FC=95
+
+Id_Regula@86
+Premise:
+[#] durere_cap
+diagnostic = cefalee//FC=95
+
+Id_Regula@87
+Premise:
+[#] tuse <- productiva
+[#] secretie_nazala
+diagnostic = sputa//FC=95
+
+Id_Regula@88
+Premise:
+[#] dificultate_respiratie
+[#] secretie_nazala
+diagnostic = nas_infundat//FC=95
+
+Id_Regula@89
+Premise:
+[#] secretie_ochi
+[#] culoare_secretie <- alb_galbui
+diagnostic = secretie_alb_galbuie//FC=95
+
+Id_Regula@90
+Premise:
+[#] lacrimare <- puternica
+diagnostic = hiperlacrimare//FC=95
+
+Id_Regula@91
+Premise:
+[#] durere_oculara
+[#] sensibilitate_lumina
+[#] edem
+diagnostic = fotofobie//FC=95
+
+Id_Regula@92
+Premise:
+[#] greata
+diagnostic = senzatie_arsura_abdominala//FC=95
+
+Id_Regula@93
+Premise:
+[#] durere_abdominala
+[#] diaree
+[#] senzatie_arsura_abdominala
+diagnostic = lipsa_apetit//FC=95
+
+Id_Regula@94
+Premise:
+[#] vedere_incetosata
+[#] durere_oculara
+diagnostic = tulburari_vizuale//FC=95
+
+Id_Regula@95
+Premise:
+[#] temperatura <- '20-35.5 grade'
+diagnostic = hipotermie//FC=95
+
+Id_Regula@96
+Premise:
+[#] temperatura <- '35.5-37.5 grade'
+diagnostic = deloc//FC=95
+
+Id_Regula@97
+Premise:
+[#] temperatura <- '37.51-50 grade'
+diagnostic = mare//FC=95
+
+Id_Regula@98
+Premise:
+[#] varsta <- '0-18 ani'
+diagnostic = copil//FC=95
+
+Id_Regula@99
+Premise:
+[#] varsta <- '18-50 ani'
+diagnostic = adult//FC=95
+
+Id_Regula@100
+Premise:
+[#] varsta <- '50-110 ani'
+diagnostic = batran//FC=95
+
+Id_Regula@101
+Premise:
+[#] nr_pipi<- '10-30 ori'
+diagnostic = poliurie//FC=95
+
+Id_Regula@102
+Premise:
+[#] nr_scaune_pe_zi <- '2-30 ori'
+diagnostic = incontinenta_fecala//FC=95
+
+Id_Regula@103
+Premise:
+[#] nr_scaune_pe_zi <- '3-30 ori'
+[#] febra <- mare
+[#] greata
+[#] ameteala
+[#] durere_abdominala
+diagnostic = diaree//FC=95
+
+Id_Regula@104
+Premise:
+[#] varsta <- copil
+[#] zona_dureroasa <- absomen
+[#] febra <- mare
+[#] cefalee
+[#] diaree
+[#] varsaturi
+diagnostic=icter//FC= 90 .
+
+Id_Regula@105
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- absomen
+[#] febra <- mare
+[#] cefalee
+[#] diaree
+[#] varsaturi
+diagnostic=icter//FC= 85 .
+
+Id_Regula@106
+Premise:
+[#] varsta <- batran
+[#] zona_dureroasa <- absomen
+[#] febra <- mare
+[#] cefalee
+[#] diaree
+[#] varsaturi
+diagnostic=icter//FC= 70 .
+
+Id_Regula@107 
+Premise:
+[#] zona_dureroasa <- bazin
+[#] sex <- masculin
+[#] durere_urinara
+diagnostic=prostatita//FC= 65 .
+
+Id_Regula@108
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- general
+[#] eczema_piele_prurit
+[#] frisoane
+[#] not[stranut]
+[#] not[durere_gat]
+diagnostic=varicela//FC= 60 .
+
+Id_Regula@109
+Premise:
+[#] varsta <- adult
+[#] zona_dureroasa <- abdomen
+[#] febra <- mare
+[#] varsaturi
+[#] senzatie_arsura_abdominala
+[#] constipatie
+diagnostic=ulcer//FC= 90 .
+
+[nr_ani #
+‘Ce varsta aveti? (7 – 100 ani)’ #
+7 || 8 || 9 || 10 || 11 || 12 || 13 || 14 || 15 || 16 || 17 || 18 || 19 || 20 || 21 || 22 || 23 || 24 || 25 || 26 || 27 || 28 || 29 || 30 || 31 || 32 || 33 || 34 || 35 || 36 || 37 || 38 || 39 || 40 || 41 || 42 || 43 || 44 || 45 || 46 || 47 || 48 || 49 || 50 || 51 || 52 || 53 || 54 || 55 || 56 || 57 || 58 || 59 || 60 || 61 || 62 || 63 || 64 || 65 || 66 || 67 || 68 || 69 || 70 || 71 || 72 || 73 || 74 || 75 || 76 || 77 || 78 || 79 || 80 || 81 || 82 || 83 || 84 || 85 || 86 || 87 || 88 || 89 || 90 || 91 || 92 || 93 || 94 || 95 || 96 || 97 || 98 || 99 || 100 ] .
+
+[senzatie_lipsa_aer #
+‘Simtiti ca nu aveti aer si ca nu puteti respira?’ #
+da || nu ] .
+
+[sex #
+‘Care este sexul dumneavoastra?’ #
+F || M || nu conteaza ] .
+
+[simptom_piele #
+‘V-au aparut pete/prurit pe piele?’ #
+pete || prurit || deloc ] .
+
+[pete_rosii #
+‘Aveti pete rosii pe piele?’ #
+da || nu ] .
+
+[zona_dureroasa #
+‘In ce zona a corpului aveti dureri?’ #
+cap || torace || abdomen || bazin || general ] .
+
+[nr_pipi #
+‘De cate ori urinati pe zi?’ #
+1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 10 || 11 || 12 || 13 || 14 || 15 || rux ] .
+
+[sange_in_urina #
+‘Ati observat prezenta sangelui in urina?’ #
+da || nu ] .
+
+[temperatura #
+‘Ce temperatura aveti?’ #
+33 || 34 || 35 || 36 || 37 || 38 || 39 || 40 || 41 || 42 || 43 || 44 || 45 ] .
+
+[transpiratie #
+‘Transpirati excesiv?’ #
+da || nu ] .
+
+[frig_excesiv #
+‘Va este foarte frig?’ #
+da || nu ] .
+
+[amorteala #
+‘Aveti o senzatie de amorteala?’ #
+da || nu ] .
+
+[insomnie #
+‘Aveti insomnii? #
+da || nu ] .
+
+[durere_spate #
+‘Aveti dureri de spate? #
+deloc || slabe || puternice ] .
+
+[durere_abdominala #
+‘Aveti dureri abdominale?’ #
+deloc || slabe || puternice ] .
+
+[durere_cap #
+‘Aveti dureri de cap?’ #
+deloc || slabe || puternice ] .
+
+[durere_la_urinare #
+‘Aveti dureri la urinare?’ #
+da || nu ] .
+
+[durere_in_piept #
+‘Aveti dureri in piept?’ #
+da || nu ] .
+
+[wheezing #
+‘Respiratia dumneavoastra este suieratoare?’ #
+da || nu ] .
+
+[crampe_musculare #
+‘Aveti crampe musculare?’ #
+da || nu ] .
+
+[balonare_abdominala #
+‘Sunteti balonat?’ #
+da || nu ] .
+
+[dificultate_inghitire #
+‘Prezentati dificultati la inghitire?’ #
+da || nu ] .
+
+[uscaciune_gat #
+‘Aveti senzatie de gat uscat?’ #
+da || nu ] .
+
+[raguseala #
+‘Aveti vocea ragusita?’ #
+da || nu ] .
+
+[dificultate_respiratie#
+‘Prezentati dificultate in respiratie?’ #
+da || nu ] .
+
+[stranut#
+‘Stranutati mai des decat ar fi normal?’ #
+da || nu ] .
+
+[vedere_incetosata#
+‘Aveti vederea incetosata?’ #
+da || nu ] .
+
+[sensibilitate_lumina#
+‘Prezentati o sensibilitate la lumina?’ #
+da || nu ] .
+
+[durere_oculara#
+‘Simtiti o durere oculara neobisnuita?’ #
+da || nu ] .
+
+[expunere_solara#
+‘Ati fost recent expus la soare?’ #
+da || nu ] .
+
+[secretie_ochi#
+‘Prezentati o secretie neobisnuita la nivelul ochilor?’ #
+da || nu ] .
+
+[culoare_secretie#
+‘Ce culoare are secretia?’ #
+alb_galbui  || galbena || verde ] .
+
+[secretie_nazala#
+‘Aveti secretie nazala?’ #
+da || nu ] .
+
+[varsaturi#
+‘Ati avut sau aveti varsaturi?’ #
+da || nu ] .
+
+[arsuri_gastrice#
+‘Prezentati senzatii de arsuri gastrice?’ #
+da || nu ] .
+
+[scaune_pe_zi#
+‘Cate scaune aveti, in medie, pe zi?’ #
+1 || 2 || 3 || 4 || 0 ] .
+
+[lipsa_energie#
+‘Va simtiti, in general, lipsit de energie?’ #
+da || nu ] .
+
+[plictiseala#
+‘Va simtiti, in general, plictisit?’ #
+da || nu ] .
+
+[tuse#
+‘Prezentati episoade de tuse?’ #
+deloc || seaca || productiva ] .
+
+[lacrimare#
+‘Prezentati simptome de lacrimare a ochilor?’ #
+deloc || slaba || puternica ] .
+
+[incontinenta_fecala#
+‘Va este greu sa controlati scaunele?’ #
+da || nu ] .
+
+[greata#
+‘Aveti stari de greata?’ #
+da || nu ] .
+
+[mancarimi#
+‘Aveti mancarimi?’ #
+da || nu ] .
+
+[senzatie_arsura#
+‘Aveti senzatie de arsura?’ #
+da || nu ] .
+
+[incontinenta_urinara#
+‘Va este greu sa controlati urinarea?’ #
+da || nu ] .
