@@ -719,14 +719,14 @@ id_regula@83
 premise:
 [#]durere_abdominala<-slaba
 [#]varsaturi
-[#]incontinenta_fecala
+[#]not[incontinenta_fecala]
 diagnostic=constipatie//fc=95.
 
 id_regula@84
 premise:
 [#]durere_abdominala<-puternica
 [#]varsaturi
-[#]incontinenta_fecala
+[#]not[incontinenta_fecala]
 diagnostic=constipatie//fc=95.
 
 id_regula@85
@@ -827,12 +827,12 @@ diagnostic=poliurie//fc=95.
 
 id_regula@102
 premise:
-[#]nr_scaune_pe_zi<-'2-30 ori'
+[#]nr_scaune_pe_zi<-'2-4 ori'
 diagnostic=incontinenta_fecala//fc=95.
 
 id_regula@103
 premise:
-[#]nr_scaune_pe_zi<-'3-30 ori'
+[#]incontinenta_fecala
 [#]febra<-mare
 [#]greata
 [#]ameteala
@@ -1036,7 +1036,7 @@ da || nu ].
 'Prezentati senzatii de arsuri gastrice?'#
 da || nu ].
 
-[scaune_pe_zi#
+[nr_scaune_pe_zi#
 'Cate scaune aveti, in medie, pe zi?'#
 1 || 2 || 3 || 4 || 0 ].
 
@@ -1055,10 +1055,6 @@ deloc || seaca || productiva ].
 [lacrimare#
 'Prezentati simptome de lacrimare a ochilor?'#
 deloc || slaba || puternica ].
-
-[incontinenta_fecala#
-'Va este greu sa controlati scaunele?'#
-da || nu ].
 
 [greata#
 'Aveti stari de greata?'#
