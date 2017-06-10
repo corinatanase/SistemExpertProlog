@@ -455,7 +455,8 @@ premise:
 diagnostic=bronsita//fc=65.
 
 id_regula@51
-premise:[#]varsta<-adult
+premise:
+[#]varsta<-adult
 [#]tuse
 [#]febra<-mare
 [#]wheezing
