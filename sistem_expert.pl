@@ -368,14 +368,14 @@ identificator(N) --> [id_regula,'@',N].
 
 daca(Daca) --> [premise,':'],lista_premise(Daca).
 
-lista_premise([Daca]) --> propoz(Daca).
+lista_premise([Daca]) --> ['[','#',']'], propoz(Daca).
 lista_premise([Prima|Celalalte]) --> ['[','#',']'], propoz(Prima),lista_premise(Celalalte).
 
-% atunci(av(Atr,Val),FC) --> [Atr, '=', Val,'/','/','FC','='],[FC].
+atunci(av(Atr,Val),FC) --> [Atr, '=', Val,'/','/',fc,'=',FC].
 % atunci(av(Atr,Val),100) --> [Atr, '=', Val]. 	% aici scriem desfacut propoz, propoz nu va exista la noi pt ca noi nu avem concluzii cu not
 
-atunci(Val,FC) --> [Atr, '=', Val,'/','/','FC','='],[FC].
-atunci(Val,100) --> [Atr, '=', Val]. 	% aici scriem desfacut propoz, propoz nu va exista la noi pt ca noi nu avem concluzii cu not
+% atunci(Val,FC) --> [Atr, '=', Val,'/','/',fc,'=',FC].
+% atunci(Val,100) --> [Atr, '=', Val]. 	% aici scriem desfacut propoz, propoz nu va exista la noi pt ca noi nu avem concluzii cu not
 
 propoz(not av(Atr,da)) --> [not,'[',Atr,']'].
 propoz(av(Atr,Val)) --> [Atr,'<','-',Val].
