@@ -111,7 +111,7 @@ premise:
 [#]zona_dureroasa<-general
 [#]tuse<-seaca
 [#]stranut
-diagnostic=tuse//fc=90.
+diagnostic=raceala//fc=90.
 
 id_regula@14
 premise:
@@ -119,7 +119,7 @@ premise:
 [#]zona_dureroasa<-general
 [#]tuse<-productiva
 [#]stranut
-diagnostic=tuse//fc=85.
+diagnostic=raceala//fc=85.
 
 id_regula@15
 premise:
@@ -127,7 +127,7 @@ premise:
 [#]zona_dureroasa<-general
 [#]tuse<-seaca
 [#]stranut
-diagnostic=tuse//fc=80.
+diagnostic=raceala//fc=80.
 
 id_regula@16
 premise:
@@ -135,7 +135,7 @@ premise:
 [#]zona_dureroasa<-general
 [#]tuse<-productiva
 [#]stranut
-diagnostic=tuse//fc=94.
+diagnostic=raceala//fc=94.
 
 id_regula@17
 premise:
@@ -143,7 +143,7 @@ premise:
 [#]zona_dureroasa<-general
 [#]tuse<-seaca
 [#]stranut
-diagnostic=tuse//fc=89.
+diagnostic=raceala//fc=89.
 
 id_regula@18
 premise:
@@ -645,7 +645,7 @@ id_regula@71
 premise:
 [#]pete_rosii
 [#]simptom_piele<-prurit
-diagnostic=simptom_piele_prurit//fc=95.
+diagnostic=eczema_piele_prurit//fc=95.
 
 id_regula@72
 premise:
@@ -793,32 +793,32 @@ diagnostic=tulburari_vizuale//fc=95.
 id_regula@95
 premise:
 [#]temperatura<-'20-35.5 grade'
-diagnostic=hipotermie//fc=95.
+febra=hipotermie//fc=95.
 
 id_regula@96
 premise:
 [#]temperatura<-'35.5-37.5 grade'
-diagnostic=deloc//fc=95.
+febra=deloc//fc=95.
 
 id_regula@97
 premise:
 [#]temperatura<-'37.51-50 grade'
-diagnostic=mare//fc=95.
+febra=mare//fc=95.
 
 id_regula@98
 premise:
-[#]varsta<-'0-18 ani'
-diagnostic=copil//fc=95.
+[#]nr_ani<-'0-18 ani'
+varsta=copil//fc=95.
 
 id_regula@99
 premise:
-[#]varsta<-'18-50 ani'
-diagnostic=adult//fc=95.
+[#]nr_ani<-'18-50 ani'
+varsta=adult//fc=95.
 
 id_regula@100
 premise:
-[#]varsta<-'50-110 ani'
-diagnostic=batran//fc=95.
+[#]nr_ani<-'50-110 ani'
+varsta=batran//fc=95.
 
 id_regula@101
 premise:

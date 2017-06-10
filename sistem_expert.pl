@@ -376,7 +376,7 @@ atunci(av(Atr,Val),FC) --> [Atr, '=', Val,'/','/',fc,'=',FC].
 
 propoz(not av(Atr,da)) --> [not,'[',Atr,']'].
 propoz(av(Atr,Val)) --> [Atr,'<','-',Val].
-propoz(av(Atr)) --> [Atr].
+propoz(av(Atr,da)) --> [Atr].
 
 citeste_linie([Cuv|Lista_cuv]) :-
 get_code(Car),
