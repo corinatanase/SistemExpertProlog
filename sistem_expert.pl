@@ -253,7 +253,7 @@ cum_premise(X).
 
 interogheaza(Atr,Mesaj,[da,nu],Istorie) :-
 !,write(Mesaj),nl,
-de_la_utiliz(X,Istorie,[da,nu]),
+de_la_utiliz(X,Istorie,[da,nu, nu_stiu, nu_conteaza]),
 det_val_fc(X,Val,FC),
 asserta( fapt(av(Atr,Val),FC,[utiliz]) ).
 interogheaza(Atr,Mesaj,Optiuni,Istorie) :-
@@ -373,9 +373,6 @@ lista_premise([Prima|Celalalte]) --> ['[','#',']'], propoz(Prima),lista_premise(
 
 atunci(av(Atr,Val),FC) --> [Atr, '=', Val,'/','/',fc,'=',FC].
 % atunci(av(Atr,Val),100) --> [Atr, '=', Val]. 	% aici scriem desfacut propoz, propoz nu va exista la noi pt ca noi nu avem concluzii cu not
-
-% atunci(Val,FC) --> [Atr, '=', Val,'/','/',fc,'=',FC].
-% atunci(Val,100) --> [Atr, '=', Val]. 	% aici scriem desfacut propoz, propoz nu va exista la noi pt ca noi nu avem concluzii cu not
 
 propoz(not av(Atr,da)) --> [not,'[',Atr,']'].
 propoz(av(Atr,Val)) --> [Atr,'<','-',Val].
