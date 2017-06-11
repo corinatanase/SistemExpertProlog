@@ -722,14 +722,14 @@ id_regula@83
 premise:
 [#]durere_abdominala<-slaba
 [#]varsaturi
-[#]incontinenta_fecala
+[#]not[incontinenta_fecala]
 constipatie=da//fc=85.
 
 id_regula@84
 premise:
 [#]durere_abdominala<-puternica
 [#]varsaturi
-[#]incontinenta_fecala
+[#]not[incontinenta_fecala]
 constipatie=da//fc=95.
 
 id_regula@85
@@ -1071,10 +1071,6 @@ deloc || seaca || productiva ].
 [lacrimare#
 'Prezentati simptome de lacrimare a ochilor?'#
 deloc || slaba || puternica ].
-
-[incontinenta_fecala#
-'Va este greu sa controlati scaunele?'#
-da || nu ].
 
 [greata#
 'Aveti stari de greata?'#
