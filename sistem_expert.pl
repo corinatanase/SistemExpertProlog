@@ -148,8 +148,12 @@ executa([_|_]) :-
 						write('Comanda incorecta! '),nl.
 
 scopuri_princ :-
-						scop(Atr),determina(Atr), afiseaza_scop(Atr),fail.
-scopuri_princ.
+						scop(Atr),
+						determina(Atr),setof(sol(Atr,Val,FC),G^fapt(av(Atr,Val),FC,G),L), %L= toate solutiile gasite in momentul actual
+						lista_rev(L,LNou),
+						scrie_solutii(LNou), 
+						afiseaza_scop(Atr).
+scopuri_princ:-			write('Nu s-au gasit solutii.'). 
 
 determina(Atr) :-
 						realizare_scop(av(Atr,_),_,[scop(Atr)]),!.
