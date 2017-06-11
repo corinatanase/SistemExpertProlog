@@ -8,8 +8,11 @@ package exempluinterfataprolog;
 import java.awt.FlowLayout;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.IOException;
 import java.io.PipedOutputStream;
 import java.io.PrintStream;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
@@ -49,7 +52,6 @@ public class Fereastra extends javax.swing.JFrame {
         textAreaDebug = new javax.swing.JTextArea();
         b_incarca = new javax.swing.JButton();
         b_consulta = new javax.swing.JButton();
-        tfFisier = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,17 +66,10 @@ public class Fereastra extends javax.swing.JFrame {
             }
         });
 
-        b_consulta.setText("Afla diagnosticul bolii tale :-)");
+        b_consulta.setText("Va simtiti rau? Aflati diagnosticul pentru simptomele dumneavoastra.");
         b_consulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b_consultaActionPerformed(evt);
-            }
-        });
-
-        tfFisier.setText("'reguli.txt'");
-        tfFisier.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfFisierActionPerformed(evt);
             }
         });
 
@@ -83,44 +78,36 @@ public class Fereastra extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(b_consulta)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(48, 48, 48)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(tfFisier)
-                        .addGap(18, 18, 18)
+                        .addGap(187, 187, 187)
                         .addComponent(b_incarca)))
-                .addGap(26, 26, 26))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addComponent(b_consulta)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(b_incarca)
-                    .addComponent(tfFisier, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(61, 61, 61)
+                .addContainerGap()
+                .addComponent(b_incarca)
+                .addGap(31, 31, 31)
                 .addComponent(b_consulta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                .addGap(66, 66, 66))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfFisierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfFisierActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfFisierActionPerformed
-
     private void b_incarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_incarcaActionPerformed
         Fereastra.AFISAT_SOLUTII=false;
-        String valoareParametru=tfFisier.getText();
-        tfFisier.setEnabled(false);
+        String valoareParametru= "'reguli.txt'";
+        //tfFisier.setEnabled(false);
         String dir=System.getProperty("user.dir");
         dir=dir.replace("\\", "/");
         try {
@@ -134,11 +121,28 @@ public class Fereastra extends javax.swing.JFrame {
         
     }//GEN-LAST:event_b_incarcaActionPerformed
 
+    private String readFile(String pathname) throws IOException {
+
+        File file = new File(pathname);
+        StringBuilder fileContents = new StringBuilder((int)file.length());
+        Scanner scanner = new Scanner(file);
+        String lineSeparator = System.getProperty("line.separator");
+
+        try {
+            while(scanner.hasNextLine()) {
+                fileContents.append(scanner.nextLine() + lineSeparator);
+            }
+            return fileContents.toString();
+        } finally {
+            scanner.close();
+        }
+    }
+    
     private void b_consultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_consultaActionPerformed
        
         this.remove(this.b_incarca);
         this.remove(this.b_consulta);
-        this.remove(this.tfFisier);
+        //this.remove(this.tfFisier);
         
         this.setLayout(new FlowLayout());
         this.add(this.panou_intrebari);
@@ -265,6 +269,5 @@ public class Fereastra extends javax.swing.JFrame {
     private javax.swing.ButtonGroup grupBtn;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea textAreaDebug;
-    private javax.swing.JTextField tfFisier;
     // End of variables declaration//GEN-END:variables
 }
