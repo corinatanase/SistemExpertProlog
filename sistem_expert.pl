@@ -147,11 +147,16 @@ executa([iesire]):-!.
 executa([_|_]) :-
 						write('Comanda incorecta! '),nl.
 
+%inversa(L,Lrev).
+inversa(L,Lrev):-inv_aux(L,[],Lrev).
+inversa_aux([],Laux,Laux).	
+inversa_aux([H|T],Laux,Lrev):- inversa_aux(T,[H,Laux],Lrez).
+					
 scopuri_princ :-
 						scop(Atr),
-						determina(Atr),setof(sol(Atr,Val,FC),G^fapt(av(Atr,Val),FC,G),L), %L= toate solutiile gasite in momentul actual
-						lista_rev(L,LNou),
-						scrie_solutii(LNou), 
+						determina(Atr),setof(sol(Atr,Val,FC),G^fapt(av(Atr,Val),FC,G),L), %L - solutiile gasite
+						inversa(L,LSortata),
+						scrie_solutii(LSortata), 
 						afiseaza_scop(Atr).
 scopuri_princ:-			write('Nu s-au gasit solutii.'). 
 
