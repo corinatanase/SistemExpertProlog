@@ -50,7 +50,7 @@ intreaba_acum(Rasp):-intrebare_curenta(Atr,OptiuniV,MesajV),interogheaza1(Rasp,A
 						asserta( interogat(av(Atr,_)) ).
 
 interogheaza1(X,Atr,Mesaj,[da,nu],Istorie) :-
- 						!,de_la_utiliz1(X,Istorie,[da,nu]),
+						!,de_la_utiliz1(X,Istorie,[da,nu]),
 						det_val_fc(X,Val,FC),
 						asserta( fapt(av(Atr,Val),FC,[utiliz]) ).
 
@@ -135,30 +135,28 @@ pornire :-
 executa([incarca]) :-
 						incarca,!,nl,
 						write('Fisierul dorit a fost incarcat'),nl.
-executa([consulta]) :-
+						executa([consulta]) :-
 						scopuri_princ,!.
-executa([reinitiaza]) :-
+						executa([reinitiaza]) :-
 						retractall(interogat(_)),
 						retractall(fapt(_,_,_)),!.
-executa([afisare_fapte]) :-              %AFISEAZA FAPTELE DIN SISTEMUL EXPERT
+						executa([afisare_fapte]) :-              %AFISEAZA FAPTELE DIN SISTEMUL EXPERT
 						afiseaza_fapte,!.
-executa([cum|L]) :- cum(L),!.
-executa([iesire]):-!.
-executa([_|_]) :-
+						executa([cum|L]) :- cum(L),!.
+						executa([iesire]):-!.
+						executa([_|_]) :-
 						write('Comanda incorecta! '),nl.
 
-%inversa(L,Lrev).
-inversa(L,Lrev):-inv_aux(L,[],Lrev).
-inversa_aux([],Laux,Laux).	
-inversa_aux([H|T],Laux,Lrev):- inversa_aux(T,[H,Laux],Lrez).
-					
 scopuri_princ :-
 						scop(Atr),
-						determina(Atr),setof(sol(Atr,Val,FC),G^fapt(av(Atr,Val),FC,G),L), %L - solutiile gasite
-						inversa(L,LSortata),
-						scrie_solutii(LSortata), 
+						determina(Atr), setof(sol(Atr,Val,FC),G^fapt(av(Atr,Val),FC,G),L),
+						lista_rev(L,LNou),
 						afiseaza_scop(Atr).
-scopuri_princ:-			write('Nu s-au gasit solutii.'). 
+scopuri_princ:-write('Nu s-au gasit solutii.') .
+
+lista_rev(L1,L2) :- listaaux(L1,[],L2).
+listaaux([],Laux,Laux).
+listaaux([H|T],Laux,L2) :- listaaux(T,[H|Laux],L2).
 
 determina(Atr) :-
 						realizare_scop(av(Atr,_),_,[scop(Atr)]),!.
@@ -189,7 +187,8 @@ realizare_scop(Scop,FC_curent,Istorie) :-
 						fg(Scop,FC_curent,Istorie).
 
 fg(Scop,FC_curent,Istorie) :-
-						regula(N, premise(Lista), concluzie(Scop,FC)),
+						regula(N, premise(Lista),
+						concluzie(Scop,FC)),
 						demonstreaza(N,Lista,FC_premise,Istorie),
 						ajusteaza(FC,FC_premise,FC_nou),
 						actualizeaza(Scop,FC_nou,FC_curent,N),
@@ -261,7 +260,7 @@ cum_premise([Scop|X]) :-
 
 interogheaza(Atr,Mesaj,[da,nu],Istorie) :-
 						!,write(Mesaj),nl,
-						citeste_opt(VLista, [da,nu,nu_stiu,nu_conteaza],Istorie),						% aici am adaugat nu_stiu, nu_conteaza
+						citeste_opt(X, [da, nu, nu_stiu, nu_conteaza], Istorie),
 %						de_la_utiliz(X,Istorie,[da,nu, nu_stiu, nu_conteaza]),
 						det_val_fc(X,Val,FC),
 						asserta( fapt(av(Atr,Val),FC,[utiliz]) ).
@@ -278,7 +277,7 @@ citeste_opt(X,Optiuni,Istorie) :-
 						de_la_utiliz(X,Istorie,Optiuni).
 
 de_la_utiliz(X,Istorie,Lista_opt) :-
-						repeat, write(': '),citeste_linie(X),
+						repeat,write(': '),citeste_linie(X),
 						proceseaza_raspuns(X,Istorie,Lista_opt).
 
 proceseaza_raspuns([de_ce],Istorie,_) :- nl,afis_istorie(Istorie),!,fail.
@@ -311,7 +310,7 @@ demonstreaza(N,ListaPremise,Val_finala,Istorie) :-
 dem(ListaPremise,100,Val_finala,[N|Istorie]),!.
 
 dem([],Val_finala,Val_finala,_).
-dem([H|T],Val_actuala,Val_finala,Istorie) :-
+						dem([H|T],Val_actuala,Val_finala,Istorie) :-
 						realizare_scop(H,FC,Istorie),
 						Val_interm is min(Val_actuala,FC),
 						Val_interm >= 20,
