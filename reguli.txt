@@ -742,7 +742,7 @@ edem=da//fc=95.
 
 id_regula@86
 premise:
-[#]durere_cap
+[#]durere_cap<-puternica
 cefalee=da//fc=95.
 
 id_regula@87
@@ -962,10 +962,6 @@ deloc || slaba || puternica ].
 [durere_cap#
 'Aveti dureri de cap?'#
 deloc || slaba || puternica ].
-
-[durere_urinara#
-'Aveti dureri la urinare?'#
-da || nu ].
 
 [durere_in_piept#
 'Aveti dureri in piept?'#
