@@ -17,8 +17,8 @@ import java.net.Socket;
  * @author Irina
  */
 public class ConexiuneProlog {
-    final String caleExecutabilSicstus="C:\\Users\\Irina\\Desktop\\SICStus Prolog 4.0.2\\SICStus Prolog 4.0.2\\bin\\spwin.exe";
-    final String nume_fisier="sistem_expert_carte.pl";
+    final String caleExecutabilSicstus="C:\\Users\\Talida\\Downloads\\prolog\\ia\\SICStus Prolog 4.0.2\\bin\\spwin.exe";
+    final String nume_fisier="sistem_expert.pl";
     //final String nume_fisier="ceva_simplu.pl";    
     final String scop="inceput.";    
     //final String scop="main.";
