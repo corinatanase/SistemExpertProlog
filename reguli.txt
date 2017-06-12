@@ -905,7 +905,7 @@ diagnostic=ulcer//fc=90.
 
 [senzatie_lipsa_aer#
 'Simtiti ca nu aveti aer si ca nu puteti respira?'#
-da || nu ].
+da || nu].
 
 [sex#
 'Care este sexul dumneavoastra?'#
@@ -917,7 +917,7 @@ pete || prurit || deloc].
 
 [pete_rosii#
 'Aveti pete rosii pe piele?'#
-da || nu ].
+da || nu].
 
 [zona_dureroasa#
 'In ce zona a corpului aveti dureri?'#
@@ -929,7 +929,7 @@ cap || torace || abdomen || bazin || general].
 
 [sange_in_urina#
 'Ati observat prezenta sangelui in urina?'#
-da || nu ].
+da || nu].
 
 [temperatura#
 'Ce temperatura aveti? (grade)'#
