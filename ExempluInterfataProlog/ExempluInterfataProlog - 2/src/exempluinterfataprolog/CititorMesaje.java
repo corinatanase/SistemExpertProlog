@@ -88,6 +88,7 @@ public class CititorMesaje extends Thread {
                             if(text.length()>2 && text.charAt(0)=='i'&& text.charAt(1)=='(' && text.charAt(text.length()-1)==')')
                             {
                                 String intrebare=text.substring(2, text.length()-1);
+                                System.out.println(text);
                                 conexiune.getFereastra().setIntrebare(intrebare);
                             }
                             //verific daca sunt optiuni
