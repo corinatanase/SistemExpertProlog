@@ -55,19 +55,19 @@ public class Fereastra extends javax.swing.JFrame {
         b_consulta = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        tfFisier = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 0, 204));
         setBounds(new java.awt.Rectangle(204, 0, 204, 204));
-        getContentPane().setLayout(null);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         textAreaDebug.setColumns(20);
         textAreaDebug.setForeground(new java.awt.Color(204, 0, 204));
         textAreaDebug.setRows(5);
         jScrollPane1.setViewportView(textAreaDebug);
 
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(100, 240, 425, 96);
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 425, -1));
 
         b_incarca.setBackground(new java.awt.Color(204, 0, 204));
         b_incarca.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,8 +77,7 @@ public class Fereastra extends javax.swing.JFrame {
                 b_incarcaActionPerformed(evt);
             }
         });
-        getContentPane().add(b_incarca);
-        b_incarca.setBounds(50, 450, 131, 25);
+        getContentPane().add(b_incarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 131, -1));
 
         b_consulta.setBackground(new java.awt.Color(204, 0, 204));
         b_consulta.setForeground(new java.awt.Color(255, 255, 255));
@@ -88,8 +87,7 @@ public class Fereastra extends javax.swing.JFrame {
                 b_consultaActionPerformed(evt);
             }
         });
-        getContentPane().add(b_consulta);
-        b_consulta.setBounds(100, 190, 425, 25);
+        getContentPane().add(b_consulta, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(204, 0, 204));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -99,20 +97,26 @@ public class Fereastra extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1);
-        jButton1.setBounds(450, 30, 131, 25);
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 10, 131, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/exempluinterfataprolog/background.jpg"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 630, 510);
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 520));
+
+        tfFisier.setText("'reguli.txt'");
+        tfFisier.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfFisierActionPerformed(evt);
+            }
+        });
+        getContentPane().add(tfFisier, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void b_incarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_incarcaActionPerformed
         Fereastra.AFISAT_SOLUTII=false;
-        String valoareParametru= "'reguli.txt'";
-        //tfFisier.setEnabled(false);
+        String valoareParametru=tfFisier.getText();
+        tfFisier.setEnabled(false);
         String dir=System.getProperty("user.dir");
         dir=dir.replace("\\", "/");
         try {
@@ -145,7 +149,7 @@ public class Fereastra extends javax.swing.JFrame {
        
         this.remove(this.b_incarca);
         this.remove(this.b_consulta);
-        //this.remove(this.tfFisier);
+        this.remove(this.tfFisier);
         
         this.setLayout(new FlowLayout());
         this.add(this.panou_intrebari);
@@ -165,6 +169,10 @@ public class Fereastra extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void tfFisierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfFisierActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfFisierActionPerformed
 
      private void optiuneButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
        
@@ -224,7 +232,6 @@ public class Fereastra extends javax.swing.JFrame {
     }
     public void setIntrebare(String intreb){
         this.panou_intrebari.label_intrebare.setText("<html><body style='width:100%'>"+ intreb +"</html>");
-        System.out.print(intreb);
         this.panou_intrebari.repaint();
     }
     
@@ -293,5 +300,7 @@ public class Fereastra extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea textAreaDebug;
+    private javax.swing.JTextField tfFisier;
     // End of variables declaration//GEN-END:variables
+
 }
