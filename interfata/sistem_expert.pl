@@ -286,7 +286,7 @@ interogheaza(Stream,Atr,Mesaj,[da,nu],Istorie) :-
 
 interogheaza(Stream,Atr,Mesaj,Optiuni,Istorie) :-
 	write('\n Intrebareee atr val multiple\n'),
-	write(Stream,Mesaj),nl(Stream),flush_output(Stream),
+	write(Stream,i(Mesaj)),nl(Stream),flush_output(Stream),
 	citeste_opt(Stream,VLista,Optiuni,Istorie),
 	assert_fapt(Atr,VLista).
 
