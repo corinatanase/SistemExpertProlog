@@ -43,7 +43,7 @@ public class ExpeditorMesaje extends Thread{
     
     public ExpeditorMesaje(CititorMesaje _cm) throws IOException{
         cm=_cm;
-        pis=new PipedInputStream(50000);
+        pis=new PipedInputStream();
         setPipedOutputStream(new PipedOutputStream(pis));
 
     }

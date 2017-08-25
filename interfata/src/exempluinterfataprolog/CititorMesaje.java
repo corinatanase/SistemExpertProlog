@@ -70,7 +70,7 @@ public class CititorMesaje extends Thread {
             InputStream is=s_aux.getInputStream();
             
             PipedOutputStream pos=new PipedOutputStream();
-            setPipedInputStream(new PipedInputStream(pos, 50000));//leg un pipedInputStream de capatul in care se scrie
+            setPipedInputStream(new PipedInputStream(pos));//leg un pipedInputStream de capatul in care se scrie
             
             int chr;
             String str="";
